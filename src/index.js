@@ -1,13 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './routes';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { withStore } from "./store/configureStore";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  withStore(Routes),
   document.getElementById('root')
 );
 
